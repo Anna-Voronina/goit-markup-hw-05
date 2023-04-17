@@ -547,7 +547,7 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
 
-  transition: color var(--transition-duration), var(--timing-function),
+  transition: color var(--transition-duration) var(--timing-function),
     background-color var(--transition-duration) var(--timing-function),
     box-shadow var(--transition-duration) var(--timing-function);
 }
@@ -661,10 +661,6 @@ body {
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
-}
-
 .modal {
   position: absolute;
   top: 50%;
@@ -679,6 +675,10 @@ body {
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transition-duration) var(--timing-function);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal-close-btn {
